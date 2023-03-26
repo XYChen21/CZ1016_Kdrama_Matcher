@@ -1,7 +1,7 @@
 import scrapy
 import pandas as pd
 
-lk = pd.read_csv('url.csv')
+lk = pd.read_csv('../data/interim/url.csv')
 half = lk['URL'].values
 links = ['https://mydramalist.com/' + i + '/reviews?xlang=en-US&status=completed' for i in half]
 # the urls are incomplete so we create manually and set the filter for reviews: language to English, status to completed
