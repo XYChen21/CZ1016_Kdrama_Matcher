@@ -84,11 +84,11 @@ Project Organization
 
 - Visualization of the matches generated (data stored in `results` folder)
 
-5.1. global.R: all the csv we have generated will be imported in this file so that our ui and server file can always access it.
+4.1. global.R: all the csv we have generated will be imported in this file so that our ui and server file can always access it.
 
-5.2. ui.R: the design of the dashboard as well as its structure
+4.2. ui.R: the design of the dashboard as well as its structure
 
-5.3. server.R: the interactive aspect of the dashboard so that it is able to function the way we want to.
+4.3. server.R: the interactive aspect of the dashboard so that it is able to function the way we want to.
 
 To access the dashboard, please go to: https://valencialie11.shinyapps.io/actormatcher/
 
