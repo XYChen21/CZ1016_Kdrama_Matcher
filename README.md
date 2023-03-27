@@ -44,7 +44,7 @@ Project Organization
 ## Pipeline explanation
 ### 1. Scraper
 `/scraper/spiders`
-- Crawled data including drama information, actor/actress information and reviews from https://mydramalist.com
+- Crawled data including drama information, actor/actress information and reviews from https://mydramalist.com using `scrapy`
 
 
 1.1. `kdrama_raw.py`: spider for scraping the url of all dramas
@@ -64,7 +64,7 @@ Project Organization
 2.3. `roles_cleaning.ipynb`: basic cleaning of the csv scraped from role_raw.py  
 
 `/preprocessing/coref_resolution`  
-- resolve pronouns in reviews  
+- resolve pronouns in reviews using `neuralcoref`
 
 2.4. `coref-resolve.ipynb`: drop non-English reviews, convert emojis/emoticons, replace pronouns __(this is an essential part which extract sentences with keywords and resolve pronouns to find couples mentioned for analysis later. To run this, set up environment according to `requirements_coref.txt` in root directory)__
 
@@ -73,9 +73,9 @@ Project Organization
 
 3.1. `1-jac-EDA.ipynb`: Jupyter notebook containing EDA on general information and reviews  
 
-3.2. `2-xy-sentiment.ipynb`: extract lines with keywords from reviews, find pairs from each line and do sentiment analysis for each pair  
+3.2. `2-xy-sentiment.ipynb`: extract lines with keywords from reviews, find pairs from each line using __word dependencies__ from `Spacy` dependency matcher and do sentiment analysis for each pair  
 
-3.3. `3-val-facial_sim.ipynb`: do facial similarity analysis on all images of actors that we scraped before. Match these actors and actresses with the `/data/processed/senti.csv` produced by `2-xy-sentiment.ipynb` accordingly (e.g. actor A looks the most similar to actor B and actor B is matched with actress C). 
+3.3. `3-val-facial_sim.ipynb`: do facial similarity analysis using __VGGFace embeddings__ on all images of actors that we scraped before. Match these actors and actresses with the `/data/processed/senti.csv` produced by `2-xy-sentiment.ipynb` accordingly (e.g. actor A looks the most similar to actor B and actor B is matched with actress C). 
 
 3.4. `4-val-match_recomm.ipynb`: find who are the baseline actors and actresses (those who do not need facial similarity at all and can just be matched naturally using sentiment analysis) as well as the ‘newcomers’ and clean the csv so that it is fit for our dashboard.
 
