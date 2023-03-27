@@ -23,7 +23,8 @@ Project Organization
     │   ├── basic_cleaning   <- basic cleaning on scraped results
     │   └── coref_resolution <- resolve pronouns in reviews
     │   
-    ├── notebooks            <- Analysis done in Jupyter notebooks. Naming convention is a number (for ordering), the creator's initials, and a short `-` delimited description.
+    ├── notebooks            <- Analysis done in Jupyter notebooks. Naming convention is 
+    │                           a number (for ordering), the creator's initials, and description.
     │
     ├── preprocessing        <- Data preparation
     │
