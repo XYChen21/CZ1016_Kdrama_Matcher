@@ -12,7 +12,8 @@ Project Organization
 ------------
 
     ├── LICENSE
-    ├── README.md          
+    ├── README.md 
+    ├── scraper              <- scraping scripts         
     ├── data
     │   ├── scraped_raw      <- Raw data scraped from MyDramaList.com.
     │   ├── external         <- Third party sources (Actor images).
@@ -26,11 +27,7 @@ Project Organization
     ├── notebooks            <- Analysis done in Jupyter notebooks. Naming convention is 
     │                           a number (for ordering), the creator's initials, and description.
     │
-    ├── preprocessing        <- Data preparation
-    │
     ├── results              <- Generated analysis results as csv
-    │
-    ├── scraper              <- scraping scripts
     │
     ├── visualization        <- R scripts for dashboard visualization
     │
